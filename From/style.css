@@ -1,0 +1,48 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#first{
+    border-radius: 30px;
+    background-color: rgba(63, 95, 16, 0.267);
+    box-shadow: -2px -2px 25px 5px  rgba(255, 255, 255, 0.288) ;
+}
+.body{
+    filter: blur(5px);
+    background-image: url("./forrest.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+body form label{
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.areeb{
+    border-radius: 10px;
+    background-color: rgb(64,95,16);
+    border: 2px solid rgb(64,95,16);
+    padding: 5px 8px;
+    font-weight: 600;
+    /* margin-left: 190px; */
+    /* margin: 0 auto; */
+    color: aliceblue;
+}
+.areeb2{
+    border-radius: 10px;
+    background-color: rgb(64,95,16);
+    border: 2px solid rgb(64,95,16);
+    padding: 5px 8px;
+    font-weight: 600;
+    color: aliceblue;
+    margin-left: 125px;
+}
