@@ -29,10 +29,10 @@ function signin(){
 function signinsubmit(){
     var password_sign = localStorage.getItem("password_sign")
     var email = localStorage.getItem("Email_Adress")
-    var password_sign = document.getElementById("password_sign").value
+    var password_p = document.getElementById("password_sign").value
     var Email_sign = document.getElementById("Email_sign").value
 
-    if (password_sign == password_sign & email == Email_sign) {
+    if (password_p == password_sign && email == Email_sign) {
         Swal.fire({
             position: "center",
             icon: "success",
