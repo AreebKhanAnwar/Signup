@@ -6,10 +6,10 @@ function submit() {
     var password = document.getElementById("password").value;
     
     
-    localStorage.setItem("First_Name",First_Name)
-    localStorage.setItem("Father_Name",Father_Name)
-    localStorage.setItem("Email_Adress",Email_Adress)
-    localStorage.setItem("password",password)
+    localStorage.setItem(First_Name,First_Name)
+    localStorage.setItem(Father_Name,Father_Name)
+    localStorage.setItem(Email_Adress,Email_Adress)
+    localStorage.setItem(password,password)
 
 
    clearAll()
