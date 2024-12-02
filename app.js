@@ -1,57 +1,62 @@
 function submit() {
-    
-    var First_Name = document.getElementById("First_Name").value;
-    var Father_Name = document.getElementById("Father_Name").value;
-    var Email_Adress = document.getElementById("Email_Adress").value;
+    // Retrieve input values
+    var firstName = document.getElementById("First_Name").value;
+    var fatherName = document.getElementById("Father_Name").value;
+    var emailAddress = document.getElementById("Email_Adress").value;
     var password = document.getElementById("password").value;
-    
-    
-    localStorage.setItem(First_Name,First_Name)
-    localStorage.setItem(Father_Name,Father_Name)
-    localStorage.setItem(Email_Adress,Email_Adress)
-    localStorage.setItem(password,password)
 
+    // Store values in localStorage with proper key naming
+    localStorage.setItem("First_Name", firstName);
+    localStorage.setItem("Father_Name", fatherName);
+    localStorage.setItem("Email_Adress", emailAddress);
+    localStorage.setItem("password", password);
 
-   clearAll()
-
+    // Clear input fields
+    clearAll();
 }
 function clearAll() {
-    document.getElementById("password").value = "";
     document.getElementById("First_Name").value = "";
     document.getElementById("Father_Name").value = "";
     document.getElementById("Email_Adress").value = "";
+    document.getElementById("password").value = "";
 }
 
-function signin(){
-    window.location.href = "sign_in.html"
+function signin() {
+    window.location.href = "sign_in.html";
 }
 
-function signinsubmit(){
-    var password_sign = localStorage.getItem("password_sign")
-    var email = localStorage.getItem("Email_Adress")
-    var password_p = document.getElementById("password_sign").value
-    var Email_sign = document.getElementById("Email_sign").value
+function signinsubmit() {
+    // Retrieve stored data
+    var storedEmail = localStorage.getItem("Email_Adress");
+    var storedPassword = localStorage.getItem("password");
 
-    if (password_p == password_sign && email == Email_sign) {
+    // Get user input from sign-in form
+    var enteredEmail = document.getElementById("Email_sign").value;
+    var enteredPassword = document.getElementById("password_sign").value;
+
+    // Validate email and password
+    if (storedEmail == enteredEmail && storedPassword == enteredPassword) {
         Swal.fire({
             position: "center",
             icon: "success",
             title: "Congratulations! You're In",
             showConfirmButton: false,
             timer: 1500
-          });
+        });
     } else {
         Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Your Email or password is Incorrect!",
             footer: '<a href="#">Why do I have this issue?</a>'
-          });    }
+        });
+    }
 
-    clear()
+    // Clear input fields
+    clearSignInForm();
 }
 
-function clear() {
-    var password_sign = document.getElementById("password_sign").value = ""
-    var Email_sign = document.getElementById("Email_sign").value = ""
+function clearSignInForm() {
+    document.getElementById("Email_sign").value = "";
+    document.getElementById("password_sign").value = "";
 }
